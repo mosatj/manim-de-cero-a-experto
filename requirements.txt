@@ -1,0 +1,5 @@
+# Dependencias para ejecutar los ejemplos del libro «Manim 0.21: de cero a experto»
+manim==0.21.0
+# Opcionales (capítulo 29): narración y presentaciones
+# manim-voiceover
+# manim-slides

@@ -1,0 +1,17 @@
+# Integración continua: en cada «push», prueba y renderiza
+name: render
+on: [push]
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: astral-sh/setup-uv@v10.2.0
+      - name: Bibliotecas del sistema para Pango y LaTeX
+        run: >
+          sudo apt-get update &&
+          sudo apt-get install -y
+          libpango1.0-dev texlive-latex-extra
+      - run: uv sync
+      - run: uv run pytest
+      - run: uv run manim -ql -a e02_demostracion.py

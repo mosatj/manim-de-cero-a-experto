@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:02,720
+Suma uno más tres más cinco más siete.
+
+2
+00:00:02,720 --> 00:00:04,080
+¿Te sale dieciséis?
+
+3
+00:00:04,080 --> 00:00:06,800
+Prueba con los cinco primeros impares.
+
+4
+00:00:07,800 --> 00:00:10,393
+Siempre sale un número al cuadrado.
+
+5
+00:00:10,393 --> 00:00:13,800
+¿Casualidad, o hay una razón que se
+pueda ver?
+
+6
+00:00:14,800 --> 00:00:18,175
+Dibuja cada impar como una escuadra de
+puntos.
+
+7
+00:00:18,175 --> 00:00:23,385
+El uno es un punto; el tres, una
+escuadra que lo abraza; el cinco, otra
+
+8
+00:00:23,385 --> 00:00:24,192
+más grande.
+
+9
+00:00:24,192 --> 00:00:27,200
+Cada escuadra completa un cuadrado
+mayor.
+
+10
+00:00:28,200 --> 00:00:32,279
+Con n escuadras se forma un cuadrado de
+lado n.
+
+11
+00:00:32,279 --> 00:00:37,400
+Por eso la suma de los n primeros
+impares es n al cuadrado.
+
+12
+00:00:38,400 --> 00:00:42,103
+La próxima vez que sumes impares, piensa
+en escuadras.
+
+13
+00:00:42,103 --> 00:00:45,600
+¿Qué figura esconderá la suma de los
+números pares?

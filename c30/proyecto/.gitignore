@@ -1,0 +1,9 @@
+# Todo lo que Manim puede regenerar a partir del código
+media/
+__pycache__/
+*.pyc
+# Entorno virtual que crea uv (uv.lock sí se versiona)
+.venv/
+# Archivos de sistema y del editor
+.DS_Store
+.vscode/
