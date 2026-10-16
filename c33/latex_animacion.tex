@@ -1,0 +1,20 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{animate}       % animaciones dentro del PDF
+\usepackage{amsmath}
+\begin{document}
+
+\section{De la secante a la tangente}
+
+Cuando $h$ tiende a 0, la secante por $(2,f(2))$ y $(2+h,f(2+h))$
+tiende a la tangente. Pulsa sobre la figura para reproducirla.
+
+\begin{center}
+  % 45 fotogramas, fotogramas/0000.png ... fotogramas/0044.png,
+  % producidos por:  manim -ql --format png-sequence ...
+  \animategraphics[width=0.8\linewidth,controls,loop]{15}%
+    {fotogramas/}{0000}{0044}
+\end{center}
+
+\end{document}

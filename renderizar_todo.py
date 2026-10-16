@@ -5,7 +5,9 @@
     python renderizar_todo.py c13 c14    # solo esos capítulos
 
 Los resultados quedan en la carpeta media/ de cada capítulo. Los programas que no
-usan Manim se ejecutan con Python y se muestra lo que imprimen.
+usan Manim se ejecutan con Python y se muestra lo que imprimen. Los archivos que
+empiezan con «# error-esperado» (capítulo 3) muestran un error a propósito: se
+ejecutan y solo cuentan como fallo si NO producen el error.
 """
 import ast
 import re
@@ -46,6 +48,12 @@ def main():
                 r = subprocess.run([sys.executable, "-m", "manim", "-ql", "-s", py.name, escena],
                                    cwd=py.parent)
                 fallos += r.returncode != 0
+        elif fuente.startswith("# error-esperado"):
+            print(f"▶ {rel} (error esperado)")
+            r = subprocess.run([sys.executable, py.name], cwd=py.parent,
+                               capture_output=True, text=True)
+            fallos += r.returncode == 0
+            print(r.stderr.strip().splitlines()[-1] if r.stderr else "¡No dio error!")
         else:
             print(f"▶ {rel} (Python)")
             r = subprocess.run([sys.executable, py.name], cwd=py.parent)

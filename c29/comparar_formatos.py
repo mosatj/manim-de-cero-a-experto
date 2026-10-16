@@ -10,7 +10,7 @@ PRUEBAS = [("mp4", []), ("webm", ["--format", "webm"]),
            ("gif", ["--format", "gif"]),
            ("mov", ["--format", "mov"]), ("mp4 -t", ["-t"]),
            ("webm -t", ["-t", "--format", "webm"]),
-           ("png", ["--format", "png"])]
+           ("png-seq", ["--format", "png-sequence"])]
 
 print(f"{'orden':9}{'archivo':8}{'códec':7}{'píxeles':9}alfa KB")
 for nombre, extra in PRUEBAS:
@@ -21,7 +21,7 @@ for nombre, extra in PRUEBAS:
         subprocess.run(orden, check=True, capture_output=True)
         salidas = [p for p in Path(carpeta, "videos").rglob("*.*")
                    if p.is_file() and "partial" not in str(p)]
-        if nombre == "png":
+        if nombre == "png-seq":
             salidas = list(Path(carpeta, "images").rglob("*.png"))
         kb = sum(p.stat().st_size for p in salidas) / 1024
         with av.open(str(salidas[0])) as c:
@@ -33,7 +33,7 @@ for nombre, extra in PRUEBAS:
             alfa = (flujo.metadata.get("alpha_mode") == "1"
                     or rgba[..., 3].min() < 255)
     tipo = salidas[0].suffix
-    if nombre == "png":
+    if nombre == "png-seq":
         tipo = f"{len(salidas)} png"
     print(f"{nombre:9}{tipo:8}{codec:7}{pix:9}"
           f"{'sí' if alfa else 'no':5}{kb:.0f}")

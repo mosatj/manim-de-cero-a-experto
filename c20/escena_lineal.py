@@ -2,7 +2,7 @@ from manim import *
 
 
 class LinealScene(LinearTransformationScene):
-    """LinearTransformationScene con un arreglo para Manim v0.21.
+    """LinearTransformationScene con un arreglo para un fallo de Manim.
 
     Scene usa el atributo moving_mobjects para su contabilidad de
     dibujo y LinearTransformationScene usa el MISMO nombre para su

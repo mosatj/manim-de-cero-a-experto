@@ -1,4 +1,4 @@
-"""mimanim: mini-biblioteca de componentes propios para Manim 0.21.
+"""mimanim: mini-biblioteca de componentes propios para Manim.
 
 Reexporta Manim, así que en un proyecto basta con
     from mimanim import *

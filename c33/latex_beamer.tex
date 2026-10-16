@@ -1,0 +1,17 @@
+\documentclass{beamer}
+\usepackage[spanish]{babel}
+\usepackage{multimedia}    % \movie, incluido con beamer
+\usetheme{default}
+\begin{document}
+
+\begin{frame}{La secante se convierte en tangente}
+  \centering
+  % El primer argumento es lo que se imprime (el último fotograma);
+  % el segundo, el vídeo que se abre al pulsar en el visor.
+  \movie[width=0.8\linewidth,height=0.45\linewidth,
+         poster,showcontrols]
+    {\includegraphics[width=0.8\linewidth]{SecanteATangente.png}}
+    {SecanteATangente.mp4}
+\end{frame}
+
+\end{document}

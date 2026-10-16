@@ -13,6 +13,6 @@ class EnfocarPunto(ThreeDScene):
                                     theta=-50 * DEGREES)
         self.add(mundo)
         # En vez de frame_center (defectuoso fuera del eje z en la
-        # v0.21), llevamos el objetivo al origen durante el zoom
+        # la biblioteca), llevamos el objetivo al origen durante el zoom
         self.move_camera(zoom=2.5, run_time=2, added_anims=[
             mundo.animate.shift(-esferas[0].get_center())])

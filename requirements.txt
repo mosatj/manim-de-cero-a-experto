@@ -1,5 +1,14 @@
-# Dependencias para ejecutar los ejemplos del libro «Manim 0.21: de cero a experto»
-manim==0.21.0
+# Dependencias para ejecutar los ejemplos del libro «Manim: de cero a experto»
+# Versión con la que se comprobó la edición (cualquier versión posterior debería funcionar)
+manim>=0.22.0
+# Manim ya instala numpy, scipy, networkx, Pillow, av y pygments.
+
+# Capítulo 33 (integración con el ecosistema de Python)
+matplotlib
+sympy
+pandas
+
 # Opcionales (capítulo 29): narración y presentaciones
 # manim-voiceover
+# manim-voiceover-qwen3-tts   # voz clonada con Qwen3-TTS (modelos locales)
 # manim-slides

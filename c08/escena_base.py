@@ -7,7 +7,7 @@ class EscenaDelLibroBase(Scene):
     def setup(self):
         self.plano = NumberPlane(background_line_style={
             "stroke_opacity": 0.25})
-        self.firma = Text("Manim 0.21", font_size=24)
+        self.firma = Text("Manim", font_size=24)
         self.firma.to_corner(DR).set_opacity(0.6)
         self.add(self.plano, self.firma)
 

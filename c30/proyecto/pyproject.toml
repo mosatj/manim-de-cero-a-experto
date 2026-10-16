@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Lección animada: la suma de los impares es n²"
 requires-python = ">=3.11"
 dependencies = [
-    "manim==0.21.0",
+    "manim==0.22.0",
 ]
 
 [dependency-groups]

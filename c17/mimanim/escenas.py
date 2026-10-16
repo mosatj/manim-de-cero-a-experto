@@ -9,7 +9,7 @@ class PlantillaScene(Scene):
 
     COLOR_FONDO = "#0B2A3C"
     COLOR_ACENTO = "#2A8FBD"
-    FIRMA = "Manim 0.21 · de cero a experto"
+    FIRMA = "Manim · de cero a experto"
 
     def setup(self):
         super().setup()

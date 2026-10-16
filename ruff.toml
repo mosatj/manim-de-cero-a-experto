@@ -1,0 +1,11 @@
+# Configuración de ruff para el código del libro.
+# Los archivos marcados con «# error-esperado» son ejemplos de errores de sintaxis
+# (capítulo 3): no compilan a propósito y se excluyen del análisis.
+extend-exclude = [
+    "c03/_sangria.py",
+    "c03/_dospuntos.py",
+]
+
+[lint]
+# El estilo «from manim import *» es el que usa todo el libro.
+ignore = ["F403", "F405"]

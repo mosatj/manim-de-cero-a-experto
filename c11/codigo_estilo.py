@@ -1,7 +1,7 @@
 from manim import *
 from pygments.token import Comment, Keyword
 
-# En v0.21 los colores los decide Pygments: se hereda un estilo
+# Los colores los decide Pygments: se hereda un estilo
 Base = Code.get_pygments_style("monokai")
 
 

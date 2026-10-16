@@ -1,0 +1,12 @@
+% Figura de unos apuntes: el teorema de Tales (TikZ puro)
+\coordinate (O) at (0,0);
+\coordinate (A) at (5,0);
+\coordinate (B) at (4,2.4);
+\coordinate (A') at (2.5,0);
+\coordinate (B') at (2,1.2);
+\draw[thick] (O) -- (A) -- (B) -- cycle;
+\draw[thick,blue] (A') -- (B');
+\draw[dashed] (O) -- (B);
+\foreach \p/\pos in {O/below left,A/below,B/above,A'/below,B'/above left}
+  \node[\pos] at (\p) {$\p$};
+\node[blue,below=2mm] at (3.5,0) {$\dfrac{OA'}{OA}=\dfrac{OB'}{OB}$};

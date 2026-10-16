@@ -1,0 +1,21 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}      % \includegraphics
+\usepackage{amsmath}
+\begin{document}
+
+\section{La derivada como pendiente}
+
+La figura~\ref{fig:derivada} muestra la gráfica de $f(x)=x^2/4$ y
+su recta tangente en $x=2$, cuya pendiente es $f'(2)=1$.
+
+\begin{figure}[htbp]
+  \centering
+  % El PNG lo produjo Manim con:  manim -s -t -qh -o derivada ...
+  \includegraphics[width=0.8\linewidth]{derivada.png}
+  \caption{Tangente a $f$ en $x=2$. Fondo transparente (\texttt{-t}):
+    el papel se ve a través de la figura.}
+  \label{fig:derivada}
+\end{figure}
+
+\end{document}

@@ -1,5 +1,5 @@
 # Razón de contraste de las pautas WCAG entre un color y el fondo.
-# Los valores hexadecimales son los de las constantes de Manim v0.21.
+# Los valores hexadecimales son los de las constantes de Manim.
 
 COLORES = {
     "WHITE": "#FFFFFF", "YELLOW": "#F7D96F", "BLUE": "#58C4DD",
