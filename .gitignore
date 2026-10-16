@@ -7,3 +7,7 @@ __pycache__/
 .pytest_cache/
 renders/
 cache_asy/
+apC/foto_prueba.png
+apC/pista_prueba.wav
+medidas.json
+videos/

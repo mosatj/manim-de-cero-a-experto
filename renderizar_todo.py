@@ -42,6 +42,9 @@ def main():
         if "__pycache__" in rel.parts or "media" in rel.parts:
             continue
         fuente = py.read_text(encoding="utf-8")
+        if re.search(r"^\s*(from|import) manimlib\b", fuente, re.M):
+            print(f"▶ {rel} (ManimGL: se ejecuta con manimgl, se omite)")
+            continue
         if re.search(r"^\s*(from manim|import manim)", fuente, re.M):
             for escena in escenas(fuente):
                 print(f"▶ {rel} :: {escena}")
