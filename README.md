@@ -86,6 +86,27 @@ python renderizar_todo.py          # todos los capítulos
 python renderizar_todo.py c13 c14  # solo esos capítulos
 ```
 
+## Cómo citar
+
+Si usas o adaptas este código en una clase, un artículo o una tesis, cita el libro:
+
+> Toledo, M. (2026). *Manim: de cero a experto. Animaciones matemáticas con Python para
+> la enseñanza, la investigación y la creación de contenidos*.
+> https://github.com/mosatj/manim-de-cero-a-experto
+
+```bibtex
+@book{toledo2026manim,
+  author = {Toledo, Moisés},
+  title  = {Manim: de cero a experto. Animaciones matemáticas con Python para la
+            enseñanza, la investigación y la creación de contenidos},
+  year   = {2026},
+  url    = {https://github.com/mosatj/manim-de-cero-a-experto}
+}
+```
+
+GitHub también ofrece esta referencia en el botón **Cite this repository** (archivo
+`CITATION.cff`).
+
 ## Licencia
 
 El **código** de este repositorio se publica con la [licencia MIT](LICENSE): puedes
