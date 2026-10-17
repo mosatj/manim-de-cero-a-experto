@@ -28,12 +28,15 @@ VARIANTES = [  # sobre la escena vectorial, en calidad alta
 RAPIDO = sys.argv[1:] == ["rapido"]
 if RAPIDO:
     CALIDADES, VARIANTES = ["-ql"], []
+SOLO_VARIANTES = sys.argv[1:] == ["variantes"]
+if SOLO_VARIANTES:
+    ESCENAS = []
 
 
 def peso(carpeta, escena):
     """Bytes del resultado: un archivo, o la carpeta de PNG sumada."""
     finales = [p for p in Path(carpeta).rglob("*")
-               if p.is_file() and escena in p.name
+               if p.is_file() and (escena in p.name or escena in p.parts)
                and "partial_movie_files" not in p.parts
                and p.suffix in {".mp4", ".gif", ".webm", ".mov", ".png"}]
     return sum(p.stat().st_size for p in finales)
@@ -83,7 +86,7 @@ for nombre, banderas in VARIANTES:
     m = medir("Banco20s", banderas)
     resultados.append({"escena": "Banco20s", "caso": nombre, **m})
     print(f"{nombre:34}{m['segundos']:8.1f} s{m['MB']:9.2f} MB")
-if not RAPIDO:  # la caché: misma orden dos veces en la misma carpeta
+if not (RAPIDO or SOLO_VARIANTES):  # la caché: misma orden dos veces en la misma carpeta
     with tempfile.TemporaryDirectory() as tmp:
         _medir("Banco20s", ["-qh"], True, tmp)
         m = _medir("Banco20s", ["-qh"], True, tmp)
@@ -92,7 +95,8 @@ if not RAPIDO:  # la caché: misma orden dos veces en la misma carpeta
     print(f"{'-qh, segunda vez con caché':34}{m['segundos']:8.1f} s")
 equipo = {"sistema": platform.platform(), "procesador": platform.processor(),
           "maquina": platform.machine(), "python": platform.python_version()}
-Path("medidas.json").write_text(json.dumps(
+SALIDA = "medidas-variantes.json" if SOLO_VARIANTES else "medidas.json"
+Path(SALIDA).write_text(json.dumps(
     {"equipo": equipo, "resultados": resultados}, indent=2,
     ensure_ascii=False), encoding="utf-8")
-print("Guardado en medidas.json")
+print(f"Guardado en {SALIDA}")
