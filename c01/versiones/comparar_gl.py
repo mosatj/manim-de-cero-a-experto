@@ -6,14 +6,15 @@ class Comparacion(Scene):
         titulo = Text("Una escena, dos versiones", font_size=40)
         self.play(Write(titulo.to_edge(UP)))
         circulo = Circle(radius=1, color=BLUE).shift(LEFT * 4)
-        cuadrado = Square(side_length=2, color=GREEN).shift(LEFT * 4)
-        self.play(ShowCreation(circulo))             # crear un trazo
+        cuadrado = Square(2, color=GREEN).shift(LEFT * 4)
+        self.play(ShowCreation(circulo))        # crear un trazo
         self.play(Transform(circulo, cuadrado))
-        formula = Tex(r"f(x) = x^2")                 # fórmula: Tex
+        formula = Tex(r"f(x) = x^2")            # fórmula: Tex
         self.play(Write(formula.to_corner(UR)))
         ejes = Axes(x_range=[-2, 2], y_range=[0, 4],
                     width=5, height=3.5).shift(RIGHT * 2)
-        curva = ejes.get_graph(lambda x: x**2, color=YELLOW)  # .get_graph
+        curva = ejes.get_graph(lambda x: x**2,  # .get_graph
+                               color=YELLOW)
         self.play(ShowCreation(ejes), ShowCreation(curva))
         x = ValueTracker(-2)
         punto = always_redraw(

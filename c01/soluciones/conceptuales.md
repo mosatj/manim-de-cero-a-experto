@@ -75,7 +75,20 @@ transformación.
 modifica los puntos y el estilo de `cuadrado` hasta que coinciden con los de
 `circulo`, que sirve solo de molde y nunca entra en la escena.
 
-## Ejercicio 1.6 · nivel intermedio
+## Ejercicio 1.6 · nivel básico
+
+Nombra el tamaño de plano o el movimiento de cámara que describe cada frase: (a) la
+cámara se acerca hasta que solo se ve el vértice de una parábola; (b) el marco se
+desliza hacia la derecha para pasar de una fórmula a su gráfica; (c) la cámara rodea
+una superficie para verla desde todos los lados; (d) se ve toda la escena para que el
+espectador sepa dónde está.
+
+**Solución.** (a) Un zoom que termina en un plano detalle. (b) Un paneo; en una escena plana de Manim
+se ve igual que un travelling, porque la cámara no tiene profundidad. (c) Una órbita,
+propia de una escena 3D (`ThreeDScene`). (d) Un plano general, el que suele
+abrir una escena.
+
+## Ejercicio 1.7 · nivel intermedio
 
 Para cada material, decide si usarías Manim, GeoGebra, un programa de diapositivas o
 un editor de vídeo, y justifica: (a) un vídeo de 90 s que muestra cómo la serie de
@@ -89,7 +102,7 @@ animación se genera con un bucle sobre el número de términos. (b) Un editor d
 lo que Manim no está pensado. (c) GeoGebra (o Desmos): la clave es que el estudiante
 manipule el deslizador; un vídeo le quitaría la interacción.
 
-## Ejercicio 1.7 · nivel intermedio
+## Ejercicio 1.8 · nivel intermedio
 
 Estima cuánto ocuparían *sin comprimir* los fotogramas de un vídeo de 10 s en
 calidad baja y en calidad 4K (3 bytes por píxel). Compáralo con los 18 KB que ocupan
@@ -104,7 +117,7 @@ ocuparían sin comprimir $45 \times 1{,}23 \approx 55$ MB, frente a 18 KB reales
 factor de unas 3000 veces. El códec H.264 guarda sobre todo las diferencias entre
 fotogramas, y en una escena de Manim típica casi todo es fondo negro inmóvil.
 
-## Ejercicio 1.8 · nivel intermedio
+## Ejercicio 1.9 · nivel intermedio
 
 Una animación `Transform` empieza en el segundo 1 de un vídeo y dura 2 s. Si el
 vídeo va a 30 fps: (a) ¿qué número de fotograma se muestra en el instante 1,5 s
@@ -120,7 +133,7 @@ cuarto del tiempo aún se ha recorrido menos de un cuarto del camino. De hecho,
 `smooth(0.25)` vale aproximadamente $0{,}07$ (y `smooth(0.5)` vale
 exactamente $0{,}5$). El ejercicio 1.12 lo muestra en imágenes.
 
-## Ejercicio 1.10 · nivel intermedio
+## Ejercicio 1.11 · nivel intermedio
 
 Una profesora necesita tres versiones de la misma animación: (a) una cápsula vertical
 para Reels; (b) una figura de 8 cm de ancho, en 16:9, para unos apuntes impresos a
@@ -142,7 +155,7 @@ en formato vectorial.
 aula es el contraste, el grosor del trazo y el tamaño de la letra; conviene probar el
 vídeo desde el fondo del aula.
 
-## Ejercicio 1.11 · nivel intermedio
+## Ejercicio 1.12 · nivel intermedio
 
 Un divulgador prepara un vídeo de tres minutos: aparece hablando a cámara con música
 de fondo; en el primer minuto se superpone a su imagen una animación de 20 s en la que
@@ -163,7 +176,42 @@ el tramo convenza, y por último `manim -qh -t tangente.py Tangente`, que con
 `-t` produce un `.mov` con canal alfa listo para superponerlo en el
 editor.
 
-## Ejercicio 1.13 · nivel avanzado
+## Ejercicio 1.13 · nivel intermedio
+
+Repite el ejercicio resuelto «Dónde están los puntos fuertes en el marco de Manim» para
+el formato vertical, cuyo marco mide $8 \times 14{,}22$ unidades. ¿Qué cambia en la
+zona segura?
+
+**Solución.** Ahora el ancho es 8 y el alto 14,22: los papeles se intercambian. Verticales de los
+tercios: $-4 + 8/3 \approx -1{,}33$ y $+1{,}33$; horizontales: $-7{,}11 + 4{,}74 = -2{,}37$
+y $+2{,}37$. Puntos fuertes: $(\pm 1{,}33, \pm 2{,}37)$. Líneas áureas: $x = -4 +
+0{,}618 \times 8 \approx \pm 0{,}94$ e $y = -7{,}11 + 0{,}618 \times 14{,}22 \approx
+\pm 1{,}68$. La zona segura de rótulos al 90 \% deja $0{,}4$ unidades a los lados y
+$0{,}71$ arriba y abajo, pero en las aplicaciones de vídeo vertical no basta: sus botones
+y textos tapan una franja mayor, sobre todo en la parte inferior, así que conviene
+reservar bastante más margen abajo que arriba.
+
+## Ejercicio 1.14 · nivel intermedio
+
+En un fotograma de Manim hay una gráfica grande y tenue, cuya caja mide
+$6 \times 4$ unidades, con opacidad 0,2 y centrada en $x = -1$, y una fórmula
+intensa, de caja $2 \times 0{,}8$ y opacidad 1. (a) Con la regla del peso visual de la
+figura ?, ¿en qué abscisa debe ir la fórmula para que la composición
+quede en equilibrio? (b) Si quieres la fórmula sobre la vertical derecha de los
+tercios, ¿dónde debe ir entonces la gráfica?
+
+**Solución.** Las masas son $m_1 = 6 \cdot 4 \cdot 0{,}2 = 4{,}8$ para la gráfica y
+$m_2 = 2 \cdot 0{,}8 \cdot 1 = 1{,}6$ para la fórmula.
+(a) El equilibrio pide $m_1x_1 + m_2x_2 = 0$: $4{,}8 \cdot (-1) + 1{,}6 x_2 = 0$, de
+donde $x_2 = 3$. La caja de la fórmula iría de $x = 2$ a $x = 4$, dentro de la zona
+segura (que termina en $7{,}11 - 0{,}71 \approx 6{,}4$), y su centro quedaría
+0,63 unidades a la derecha de la línea del tercio, $x = 2{,}37$.
+(b) Con $x_2 = 2{,}37$, la gráfica debe ir a $x_1 = -m_2x_2/m_1 = -1{,}6 \cdot
+2{,}37/4{,}8 \approx -0{,}79$: algo más cerca del centro. Es el patrón del equilibrio
+asimétrico: lo grande y tenue cerca del fulcro, lo pequeño e intenso lejos. La regla es
+una ayuda para decidir, no una ley: si el resultado se ve mal, manda el ojo.
+
+## Ejercicio 1.16 · nivel avanzado
 
 Explica por qué la caché de Manim trabaja con un vídeo parcial *por cada
 animación* y no con el vídeo completo. Si cambias el color del círculo en la línea 10
@@ -178,3 +226,47 @@ basta recalcular los tramos afectados. Cambiar el color del círculo no altera e
 Sí cambia el `Transform`, porque su objetivo es el círculo, y también la pausa
 final, porque en ella se ve el círculo con el color nuevo: esos dos parciales se
 recalculan. Después se vuelven a unir todos en el `.mp4`.
+
+## Ejercicio 1.17 · nivel avanzado
+
+Planifica, con el flujo de la figura ?, un vídeo de dos minutos para
+tu propio curso o investigación. Escribe la pregunta que responde, una lista de cuatro
+a seis planos ---con su tamaño, su movimiento de cámara (si lo hay) y dónde cae el
+protagonista en la retícula--- y cómo comprobarás que se entiende.
+
+**Solución.** Una respuesta modelo, para un curso de cálculo. *Pregunta*: ¿por qué la derivada
+de $\sin x$ es $\cos x$? *Planos*: (1) plano general de la gráfica de $\sin x$, sin
+movimiento, título en la fila superior de la retícula; (2) zoom hacia un punto de la
+curva, que queda en un punto fuerte, y aparece la recta tangente; (3) plano medio: la
+tangente recorre la curva (seguimiento) mientras un punto dibuja su pendiente debajo;
+(4) la curva de las pendientes se completa y coincide con $\cos x$, que aparece en la
+columna de la derecha; (5) plano general de las dos curvas y la fórmula. *Prueba*:
+mostrar el vídeo sin voz a tres estudiantes y pedirles que expliquen qué representa la
+curva de abajo; si no lo consiguen, revisar el plano 3 (quizá falte un rótulo o una
+pausa) antes de tocar el código. Cualquier plan es válido si cada plano tiene un solo
+protagonista, la cámara se mueve solo cuando el contenido está quieto y la prueba se
+hace con personas del público destinatario.
+
+## Ejercicio 1.18 · nivel avanzado
+
+Diseña, sin programarla todavía, una secuencia de variación conceptual como la de la
+figura ? para una propiedad de tu curso. Indica: (a) la
+propiedad invariante; (b) qué elementos accesorios variarás y cuántos casos
+mostrarás; (c) el contraejemplo y qué condición rompe; (d) la firma de la función de
+Python que dibujaría un caso, y (e) en qué momento de la clase la proyectarías.
+
+**Solución.** Una respuesta modelo, para geometría escolar. (a) *Invariante*: la mediana de un
+triángulo lo divide en dos triángulos de igual área. (b) *Variación*: tres
+triángulos de forma, tamaño y orientación distintos (uno acutángulo, uno obtusángulo,
+uno casi degenerado), con las dos mitades coloreadas y su área calculada por el
+programa en cada caso. (c) *Contraejemplo*: un segmento desde el vértice que no
+llega al punto medio del lado opuesto, sino a un punto a un tercio; las áreas pasan a
+estar en razón 1:2, y la condición rota es «al punto medio». (d) *Firma*:
+`caso(a, b, c, giro, fraccion=0.5)`, donde `a`, `b` y `c` son los
+vértices, `giro` el ángulo de rotación del dibujo y `fraccion` la posición del
+pie del segmento sobre el lado (0,5 es la mediana); devuelve un `VGroup` y las dos
+áreas. (e) *Momento*: después de que los grupos hayan conjeturado con sus propios
+dibujos, como consolidación; la versión animada barre `fraccion` con un
+`ValueTracker` y se detiene en 0,5. Cualquier diseño es válido si los casos
+cambian solo lo accesorio, se ven a la vez y el contraejemplo rompe una única
+condición.

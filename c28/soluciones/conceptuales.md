@@ -20,7 +20,13 @@ Un guion tiene 620 palabras de narración. Si lees a 150 palabras por minuto y d
 
 **Solución.** $620/150 = 4{,}13$ min $\approx 248$ s, más 9 s de respiros: unos 257 s, es decir, 4 min 17 s. Para bajar de 4 minutos hay que quitar unos 20 s de voz, unas 45–50 palabras: busca frases que repitan lo que la imagen ya muestra (redundancia) o un ejemplo prescindible. Recortar el guion es preferible a acelerar la animación.
 
-## Ejercicio 28.4 · nivel intermedio
+## Ejercicio 28.4 · nivel básico
+
+Escribe la logline de dos vídeos: uno sobre el teorema de Pitágoras con una disección de áreas y otro sobre la serie $\frac12+\frac14+\frac18+…=1$. Comprueba en cada una los requisitos de Snyder adaptados en este capítulo: ironía, imagen mental, público y título.
+
+**Solución.** Posibles respuestas. Pitágoras: «los dos cuadrados pequeños se cortan en piezas que, recolocadas, llenan exactamente el cuadrado grande». La imagen mental (piezas que encajan) se adivina al oír la frase, y la ironía es que figuras tan distintas tengan exactamente la misma área; público: secundaria, tres minutos; título: «¿Por qué $a^2+b^2=c^2$? Míralo encajar». Serie: «un cuadrado se llena con su mitad, luego con la mitad de lo que falta, y así sin fin, sin desbordarse nunca». La ironía es la de una suma de infinitos términos que da un número finito, y la imagen mental, el cuadrado que se va llenando; público: primer curso universitario, dos minutos; título: «Infinitos trozos, un solo cuadrado». Si una logline necesita dos frases o no sugiere ninguna imagen, el vídeo aún no está claro.
+
+## Ejercicio 28.5 · nivel intermedio
 
 Escribe el guion a dos columnas (cinco bloques) de una cápsula de un minuto que muestre por qué el área de un triángulo es $\frac{b h}{2}$, partiendo de un rectángulo.
 
@@ -36,13 +42,19 @@ Escribe el guion a dos columnas (cinco bloques) de una cápsula de un minuto que
 
 -  *Cierre* — Vídeo: la fórmula enmarcada. Audio: «Por eso, la mitad. ¿Y si el triángulo no es rectángulo?».
 
-## Ejercicio 28.7 · nivel intermedio
+## Ejercicio 28.8 · nivel intermedio
 
 Un vídeo incluye una fotografía con licencia CC BY-SA, una pieza musical CC BY-NC y el resto es obra tuya. ¿Qué licencia puedes dar al vídeo? ¿Podrías monetizarlo? ¿Cómo reconocerías la fotografía?
 
 **Solución.** La cláusula SA obliga a publicar la obra derivada con la misma licencia (CC BY-SA), pero la música NC prohíbe el uso comercial, y CC BY-SA sí lo permite: las dos condiciones son incompatibles. Hay que sustituir uno de los dos materiales: por ejemplo, música CC BY o CC0. Con la música NC no podrías monetizar el vídeo. La fotografía se reconoce con título, autor, fuente (enlace) y licencia (enlace a CC BY-SA), en la descripción y, si es posible, en pantalla o en los créditos.
 
-## Ejercicio 28.10 · nivel avanzado
+## Ejercicio 28.9 · nivel intermedio
+
+Traslada la hoja de tiempos de Snyder a un vídeo de 4 minutos: calcula los instantes del catalizador, el punto intermedio, el «todo está perdido» y la transición al tercer acto. Después, adapta `hoja\_tiempos.py` para dibujar la hoja con esa duración.
+
+**Solución.** Con $D = 240$ s, $t = p\cdot 240/110$: catalizador ($p = 12$), $26{,}2$ s, hacia 0:26; punto intermedio ($p = 55$), 120 s, es decir, 2:00; todo está perdido ($p = 75$), $163{,}6$ s, hacia 2:44; transición al tercer acto ($p = 85$), $185{,}5$ s, hacia 3:05. En el programa basta cambiar la línea 5 por `DURACION = 240`: `x_de` solo usa la proporción `pagina / PAGINAS`, y el eje (`NumberLine` con `x_range=[0, DURACION, 60]`) y los rótulos de minutos, de 0:00 a 4:00, se ajustan solos. Como el vídeo dura cuatro minutos, conviene además fusionar el catalizador con el debate y la noche oscura con la transición al tercer acto.
+
+## Ejercicio 28.12 · nivel avanzado
 
 Analiza críticamente esta decisión de producción: «Para que el vídeo parezca más dinámico, acelero la voz un 25 \% y reduzco todas las pausas a 0,2 s; así cabe en 3 minutos en lugar de 4». Propón una alternativa basada en los capítulos 27 y 28.
 

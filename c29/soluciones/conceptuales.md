@@ -8,13 +8,19 @@ Escribe la orden que produce, a partir de la escena `E` del archivo `a.py`, un v
 
 **Solución.** `manim -qh -t a.py E`. Como el mp4 con H.264 y `yuv420p` no admite canal alfa, Manim cambia a `E.mov` con el códec QuickTime RLE (`qtrle`, píxeles `argb`), sin pérdida y bastante pesado. Con `manim -qh -t --format webm a.py E` se obtiene `E.webm` con VP9 y alfa (`yuva420p`), mucho más ligero.
 
-## Ejercicio 29.4 · nivel intermedio
+## Ejercicio 29.4 · nivel básico
+
+Reescribe en estilo conversacional estas tres frases de narración y explica qué cambia en cada una: (a) «Se observa que la recta corta al eje en dos»; (b) «Ahora el punto se desplaza hacia la derecha»; (c) «Aplíquese la regla de la cadena».
+
+**Solución.** (a) «Fíjate: la recta corta al eje en el dos». La segunda persona sustituye al impersonal: es el principio de personalización. (b) La frase describe lo que la animación ya muestra; mejor dar el porqué: «mientras el punto avanza, la pendiente crece, y por eso la curva se empina». (c) «¿Qué tal si probamos la regla de la cadena?»: la versión cortés invita en lugar de ordenar, y en los estudios ayudó sobre todo a quienes sabían poco del tema (Clark y Mayer, 2016).
+
+## Ejercicio 29.5 · nivel intermedio
 
 Con `ServicioEnsayo` y 0,36 s por palabra, ¿cuánto durará la frase «Primero, el guion; después, la animación, y al final, la voz.»? Compruébalo después en una escena.
 
 **Solución.** Separa la frase en palabras: *Primero, / el / guion; / después, / la / animación, / y / al / final, / la / voz.* Son 11 palabras, y 6 de ellas terminan en un signo de puntuación. Duración: $11\times 0{,}36 + 6\times 0{,}25 = 3{,}96 + 1{,}50 = 5{,}46$ s. En una escena basta con imprimir `t.duration` dentro de un `with self.voiceover(...) as t`. Este ejercicio muestra por qué conviene medir y no estimar a ojo: el ritmo depende tanto de las pausas como de las palabras.
 
-## Ejercicio 29.10 · nivel avanzado
+## Ejercicio 29.11 · nivel avanzado
 
 Vas a entregar una animación de 10 s como secuencia de PNG a 1080p60 para un editor de vídeo. ¿Cuántas imágenes se generarán? Si cada PNG ocupa unos 60 KB, ¿cuánto ocupará la secuencia y cuánto, aproximadamente, un mp4 de la misma animación a razón de 1 Mbit/s?
 

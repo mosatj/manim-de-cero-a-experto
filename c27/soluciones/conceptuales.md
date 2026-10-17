@@ -20,7 +20,13 @@ Con la salida del programa `contraste.py`, responde: (a) ¿qué colores de la ta
 
 **Solución.** (a) `BLUE\_E` (3,6:1, solo trazos gruesos), `PURE\_BLUE` (2,4:1) y `DARK\_GRAY` (2,2:1). (b) Su contraste sobre blanco es 1,4:1: amarillo claro sobre blanco casi no se distingue; con fondo blanco hay que usar colores oscuros. (c) Las pautas WCAG piden 4,5:1 para texto normal y 3:1 para texto grande y elementos gráficos: un subíndice es texto pequeño, con trazos finos que pierden contraste al suavizarse los bordes; una curva gruesa ocupa muchos píxeles y se percibe con menos contraste.
 
-## Ejercicio 27.7 · nivel intermedio
+## Ejercicio 27.4 · nivel básico
+
+Para cada decisión, di qué maestro de la sección ? la desaconsejaría y propón el cambio en Manim: (a) todas las llamadas a `self.play` duran 1 s y no hay ningún `.wait()`; (b) el vídeo empieza con la definición $\varepsilon$–$\delta$ de límite; (c) cuatro histogramas superpuestos con transparencia; (d) un punto que avanza hacia la derecha pegado al borde derecho del cuadro; (e) un párrafo de cinco líneas centradas; (f) un `NumberPlane` con su estilo por defecto bajo una curva fina del mismo color.
+
+**Solución.** (a) Williams y Lasseter: el tiempo da significado; varía `run_time`, haz breves los acentos y añade `.wait()` después de cada resultado. (b) Sanderson: nunca empieces con definiciones; abre con una pregunta concreta (¿a qué se acerca $\sin x/x$ cuando $x$ se acerca a 0?) y deja la definición para el final. (c) Tufte: múltiplos pequeños, cuatro paneles con la misma escala y `.arrange\_in\_grid()`. (d) Zettl: deja aire delante del vector de movimiento; empieza el recorrido a la izquierda. (e) Bringhurst y Lupton: líneas cortas en bandera a la izquierda (`aligned_edge=LEFT`, `Tex` con `tex_environment="flushleft"`), y probablemente menos texto, porque explicar es tarea de la voz. (f) Tufte, diferencia mínima eficaz: baja la cuadrícula con `background_line_style` (gris, fina, translúcida) y engruesa la curva.
+
+## Ejercicio 27.8 · nivel intermedio
 
 Analiza, sin programar, esta escena: doce puntos grises en fila; tres se vuelven rojos y a la vez otros tres empiezan a girar; una leyenda en la esquina explica qué significa cada cosa; la cámara se acerca mientras todo ocurre. Propón una versión mejor en tres pasos.
 
