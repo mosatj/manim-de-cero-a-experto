@@ -16,7 +16,7 @@ Reescribe como objetivos de aprendizaje con verbo observable: «que el alumno co
 
 ## Ejercicio 31.4 · nivel básico
 
-Un profesor tiene tres escenas sobre la suma de los ángulos de un triángulo: (a) un triángulo cuyos vértices se mueven mientras se oye «¿qué cambia y qué no?»; (b) la misma figura con el ángulo en $C$ resaltado y una recta paralela a $AB$ que pasa por $C$; (c) la prueba completa con los ángulos alternos internos y la fórmula final. Indica qué papel de la tabla ? cumple cada una y en qué momento de la clase la proyectarías.
+Un profesor tiene tres escenas sobre la suma de los ángulos de un triángulo: (a) un triángulo cuyos vértices se mueven mientras se oye «¿qué cambia y qué no?»; (b) la misma figura con el ángulo en $C$ resaltado y una recta paralela a $AB$ que pasa por $C$; (c) la prueba completa con los ángulos alternos internos y la fórmula final. Indica qué papel de la tabla 31.3 cumple cada una y en qué momento de la clase la proyectarías.
 
 **Solución.** (a) Es la tarea: se proyecta al comenzar, con la consigna de viva voz, y deja la pregunta abierta. (b) Es una pista: sugiere la construcción auxiliar sin completar el argumento, y se muestra durante el trabajo solo a los grupos atascados. (c) Es la consolidación: se proyecta al final, cuando todos los grupos han superado un mínimo, para formalizar lo que la clase ya descubrió. Proyectar (c) al principio sería nivelar por arriba.
 

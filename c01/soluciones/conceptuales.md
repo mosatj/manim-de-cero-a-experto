@@ -56,7 +56,7 @@ Manim Community.
 
 ## Ejercicio 1.5 · nivel básico
 
-En el programa `PrimerVistazo` de la sección 1.11: (a) clasifica
+En el programa `PrimerVistazo` de la sección 1.13: (a) clasifica
 como escena, mobject o animación cada uno de estos nombres:
 `Transform(cuadrado, circulo)`, `PrimerVistazo`, `titulo`,
 `cuadrado`, `circulo`, `Write(titulo)` y `Create(cuadrado)`; (b) ¿cuántas animaciones
@@ -106,7 +106,7 @@ manipule el deslizador; un vídeo le quitaría la interacción.
 
 Estima cuánto ocuparían *sin comprimir* los fotogramas de un vídeo de 10 s en
 calidad baja y en calidad 4K (3 bytes por píxel). Compáralo con los 18 KB que ocupan
-los 3 s en calidad baja de la tabla 1.5 y explica por qué la
+los 3 s en calidad baja de la tabla 1.6 y explica por qué la
 diferencia es tan grande.
 
 **Solución.** Calidad baja: cada fotograma ocupa $854 \times 480 \times 3 = 1 229 760$ bytes
@@ -131,7 +131,7 @@ que dura la animación, así que el tiempo relativo es $t = 0{,}25$ y, con ritmo
 uniforme, $\alpha = 0{,}25$. (c) Menor: `smooth` arranca despacio, de modo que al
 cuarto del tiempo aún se ha recorrido menos de un cuarto del camino. De hecho,
 `smooth(0.25)` vale aproximadamente $0{,}07$ (y `smooth(0.5)` vale
-exactamente $0{,}5$). El ejercicio 1.12 lo muestra en imágenes.
+exactamente $0{,}5$). El ejercicio 1.15 lo muestra en imágenes.
 
 ## Ejercicio 1.11 · nivel intermedio
 
@@ -196,7 +196,7 @@ reservar bastante más margen abajo que arriba.
 En un fotograma de Manim hay una gráfica grande y tenue, cuya caja mide
 $6 \times 4$ unidades, con opacidad 0,2 y centrada en $x = -1$, y una fórmula
 intensa, de caja $2 \times 0{,}8$ y opacidad 1. (a) Con la regla del peso visual de la
-figura ?, ¿en qué abscisa debe ir la fórmula para que la composición
+figura 1.14, ¿en qué abscisa debe ir la fórmula para que la composición
 quede en equilibrio? (b) Si quieres la fórmula sobre la vertical derecha de los
 tercios, ¿dónde debe ir entonces la gráfica?
 
@@ -229,7 +229,7 @@ recalculan. Después se vuelven a unir todos en el `.mp4`.
 
 ## Ejercicio 1.17 · nivel avanzado
 
-Planifica, con el flujo de la figura ?, un vídeo de dos minutos para
+Planifica, con el flujo de la figura 1.22, un vídeo de dos minutos para
 tu propio curso o investigación. Escribe la pregunta que responde, una lista de cuatro
 a seis planos ---con su tamaño, su movimiento de cámara (si lo hay) y dónde cae el
 protagonista en la retícula--- y cómo comprobarás que se entiende.
@@ -250,7 +250,7 @@ hace con personas del público destinatario.
 ## Ejercicio 1.18 · nivel avanzado
 
 Diseña, sin programarla todavía, una secuencia de variación conceptual como la de la
-figura ? para una propiedad de tu curso. Indica: (a) la
+figura 1.24 para una propiedad de tu curso. Indica: (a) la
 propiedad invariante; (b) qué elementos accesorios variarás y cuántos casos
 mostrarás; (c) el contraejemplo y qué condición rompe; (d) la firma de la función de
 Python que dibujaría un caso, y (e) en qué momento de la clase la proyectarías.
