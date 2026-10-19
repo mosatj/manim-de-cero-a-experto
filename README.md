@@ -2,7 +2,7 @@
 
 Repositorio de recursos digitales del libro **«Manim: de cero a experto. Animaciones
 matemáticas con Python para la enseñanza, la investigación y la creación de contenidos»**,
-de Moisés Toledo (2026).
+de Moisés Samuel Toledo Julián (2026).
 
 Aquí está todo el código del libro, **exactamente como aparece impreso**: el libro
 lee los listados de estos mismos archivos, y todos se ejecutaron con Manim Community
@@ -90,13 +90,13 @@ python renderizar_todo.py c13 c14  # solo esos capítulos
 
 Si usas o adaptas este código en una clase, un artículo o una tesis, cita el libro:
 
-> Toledo, M. (2026). *Manim: de cero a experto. Animaciones matemáticas con Python para
+> Toledo Julián, M. S. (2026). *Manim: de cero a experto. Animaciones matemáticas con Python para
 > la enseñanza, la investigación y la creación de contenidos*.
 > https://github.com/mosatj/manim-de-cero-a-experto
 
 ```bibtex
 @book{toledo2026manim,
-  author = {Toledo, Moisés},
+  author = {Toledo Julián, Moisés Samuel},
   title  = {Manim: de cero a experto. Animaciones matemáticas con Python para la
             enseñanza, la investigación y la creación de contenidos},
   year   = {2026},

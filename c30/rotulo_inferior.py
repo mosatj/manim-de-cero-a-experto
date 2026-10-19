@@ -6,7 +6,7 @@ PETROLEO, GRANATE, CREMA = "#0B2A3C", "#B04A5A", "#E9F2F7"
 
 class RotuloInferior(Scene):
     """Rótulo para superponer: con -t, el fondo es transparente."""
-    nombre = "Moisés Toledo"
+    nombre = "Moisés Samuel Toledo Julián"
     cargo = "Docente de Matemática"
     permanencia = 4  # segundos de lectura
     con_salida = True

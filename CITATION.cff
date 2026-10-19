@@ -3,8 +3,8 @@ message: "Si usas este código, cita el libro con la referencia de «preferred-c
 title: "Manim: de cero a experto — código del libro"
 type: software
 authors:
-  - family-names: Toledo
-    given-names: Moisés
+  - family-names: "Toledo Julián"
+    given-names: "Moisés Samuel"
 license: MIT
 repository-code: "https://github.com/mosatj/manim-de-cero-a-experto"
 date-released: 2026-10-16
@@ -17,7 +17,7 @@ preferred-citation:
   type: book
   title: "Manim: de cero a experto. Animaciones matemáticas con Python para la enseñanza, la investigación y la creación de contenidos"
   authors:
-    - family-names: Toledo
-      given-names: Moisés
+    - family-names: "Toledo Julián"
+      given-names: "Moisés Samuel"
   year: 2026
   url: "https://github.com/mosatj/manim-de-cero-a-experto"
